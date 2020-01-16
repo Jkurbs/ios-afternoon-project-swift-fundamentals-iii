@@ -55,6 +55,9 @@
                                         <rect key="frame" x="0.0" y="84" width="382" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <state key="normal" title="Convert"/>
+                                        <connections>
+                                            <action selector="convertButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bwz-eg-OSs"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -68,11 +71,17 @@
                                         <rect key="frame" x="0.0" y="0.0" width="42" height="36"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                         <state key="normal" title="CAD"/>
+                                        <connections>
+                                            <action selector="cadButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YOz-ty-My4"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LwJ-IE-oX9">
                                         <rect key="frame" x="50" y="0.0" width="46" height="36"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                         <state key="normal" title="MXN"/>
+                                        <connections>
+                                            <action selector="mxnButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e77-s2-LRf"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -87,6 +96,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="cadButton" destination="4i2-QK-bC3" id="8Co-3D-SPx"/>
+                        <outlet property="fromCurrencyTextField" destination="Q97-bt-eeg" id="BEH-2e-P4d"/>
+                        <outlet property="mxnButton" destination="LwJ-IE-oX9" id="Uru-u7-y4I"/>
+                        <outlet property="toCurrencyLabel" destination="Ul6-sE-H5T" id="KTp-jG-tBg"/>
+                        <outlet property="toCurrencyTextField" destination="0Aa-0l-hRP" id="o54-Y1-COb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
