@@ -8,15 +8,10 @@
 
 import UIKit
 
-
-// CAD diff == 130.30$
-// MXN diff == 18.79
-
 enum Currency {
     case cad
     case mxn
 }
-
 
 
 class ViewController: UIViewController {
