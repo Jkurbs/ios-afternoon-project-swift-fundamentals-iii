@@ -16,12 +16,11 @@ enum Currency {
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var fromCurrencyTextField: UITextField!
+    // MARK: - Properties
     
+    @IBOutlet weak var fromCurrencyTextField: UITextField!
     @IBOutlet weak var toCurrencyTextField: UITextField!
-        
     @IBOutlet weak var toCurrencyLabel: UILabel!
-        
     @IBOutlet weak var cadButton: UIButton!
     @IBOutlet weak var mxnButton: UIButton!
     
@@ -33,7 +32,7 @@ class ViewController: UIViewController {
         return formatter
     }()
 
-        // MARK: - Actions
+    // MARK: - Actions
         
     @IBAction func convertButtonTapped(_ sender: UIButton) {
             guard let from = fromCurrencyTextField.text else {return}
