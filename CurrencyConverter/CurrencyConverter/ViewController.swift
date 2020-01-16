@@ -27,7 +27,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func cadButtonTapped(_ sender: UIButton) {
-        print("test")
+        print("test 2")
     }
     
     @IBAction func mxnButtonTapped(_ sender: UIButton) {
