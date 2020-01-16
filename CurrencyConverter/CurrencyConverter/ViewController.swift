@@ -8,32 +8,76 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
     
-    // MARK: - Outlets/Properties
+    // MARK: - Properties
     
-    @IBOutlet weak var fromCurrencyTextField: UITextField!
-    @IBOutlet weak var toCurrencyTextField: UITextField!
+    let fromButton = UIButton()
+    let toButton = UIButton()
     
-    @IBOutlet weak var toCurrencyLabel: UILabel!
+    lazy var stackView: UIStackView = {
+        let view = UIStackView(arrangedSubviews: [fromButton, toButton])
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.axis = .horizontal
+        view.spacing = 20
+        view.distribution = .fillEqually
+        return view
+    }()
     
-    @IBOutlet weak var cadButton: UIButton!
-    @IBOutlet weak var mxnButton: UIButton!
+    
+    
+    // MARK: - ViewController Life cicle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.view.backgroundColor = .white
+        self.title = "Converter"
+    }
+    
+    
 
     // MARK: - Actions
     
     @IBAction func convertButtonTapped(_ sender: UIButton) {
         
-    }
-    
-    @IBAction func cadButtonTapped(_ sender: UIButton) {
-        print("test 2")
-    }
-    
-    @IBAction func mxnButtonTapped(_ sender: UIButton) {
+        if sender.isSelected {
+            
+        }
         
     }
     
+    @IBAction func cadButtonTapped(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+        if sender.isSelected {
+            
+        }
+    }
+    
+    @IBAction func mxnButtonTapped(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+        if sender.isSelected {
+            
+        }
+    }
+    
     // MARK: - Helper Methods
+    
+    
+    func setupViews() {
+        view.addSubview(stackView)
+        
+        
+    }
+    
+//    func convert(_ dollars: Double) -> Double {
+//        if self.currency == .cad {
+//            // convert to Canadian money
+//
+//        } else {
+//            // convert to Mexican money
+//        }
+//        return 0.0
+//    }
 }
 
